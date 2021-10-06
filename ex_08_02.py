@@ -11,8 +11,9 @@ count = 0
 
 for line in fh:
     line = line.rstrip()
+    #skip lines not starting with From
     if not line.startswith('From '):
-            continue
+            continue 
     count += 1
     words = line.split()
     print(words[1])
@@ -49,3 +50,16 @@ cwen@iupui.edu
 cwen@iupui.edu
 cwen@iupui.edu
 There were 27 lines in the file with From as the first word
+
+#Note: another way 
+han = open('mbox-short.txt')
+
+for line in han:
+    line = line.rstrip()
+    words = line.split()
+    #guardian in a compound statement
+    #skip either of the following two cases
+    if len(words) < 3 or words[0] != 'From':
+        continue
+    print(words[1])
+
