@@ -52,9 +52,9 @@ cwen@iupui.edu
 There were 27 lines in the file with From as the first word
 
 #Note: another way 
-han = open('mbox-short.txt')
+fh = open('mbox-short.txt')
 
-for line in han:
+for line in fh:
     line = line.rstrip()
     words = line.split()
     #guardian in a compound statement
