@@ -18,14 +18,14 @@ for lines in handle:
         continue
     lines = lines.rstrip()
     words = lines.split()
-    if len(words) < 5:
+    if len(words) < 5:                 #some lines starting with 'From' doesn't include time
         continue
     time = words[5]
     hour = time.split(':')
     lst.append(hour[0])
     
-for hr in lst:
+for hr in lst:                         #make a dictionary ('histogram')
     counts[hr] = counts.get(hr, 0) + 1
     
-for k,v in sorted(counts.items()) :
-    print(k,v)
+for k,v in sorted(counts.items()) :    #sorted(counts.items()) gives us a sorted list of tuples, i.e. [(),(),()..]
+    print(k,v)                         #also note that tuples are comparable hence they can be sorted
