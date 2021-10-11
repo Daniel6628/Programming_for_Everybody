@@ -10,6 +10,8 @@ Sample problem: Start at http://py4e-data.dr-chuck.net/known_by_Fikret.html
 Find the link at position 3 (the first name is 1). Follow that link. Repeat this process 4 times. The answer is the last name that you retrieve.
 Sequence of names: Fikret Montgomery Mhairade Butchi Anayah
 Last name in sequence: Anayah
+
+The following code is credited to https://github.com/supriyoss
 '''
 
 
